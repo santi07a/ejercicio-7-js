@@ -75,3 +75,6 @@ const equipos = [
     },
   },
 ];
+
+const equiposProvincia = equipos => equipos.filter(equipo => equipo.asignado.provincia === "Tarragona");
+console.log(equiposProvincia(equipos));
