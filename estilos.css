@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+.botonera {
+background-color: #90a081;
+}
+.consola {
+  background-color: #f1ac7b;
+}
+.recuadro {
+  background-color: #1e1e1e;
+  color: green;
+  height: 80%;
+  width: 90%;
+}
