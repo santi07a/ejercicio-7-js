@@ -10,59 +10,81 @@
   <script src="js/funciones.js"></script>
   <script src="js/scripts.js" defer></script>
   <link rel="stylesheet" href="estilos.css">
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 
-<body class="container-fluid d-flex flex-row vh-100">
-  <section
-    class="botonera container-fluid d-flex row row-cols-3 row-cols-md-4 col-md-9 col-8 align-content-start">
-    <button class="boton gt30 btn btn-lg btn-warning border-none rounded">Equipos
-      asignados a mayores de 30</button>
-    <button class="boton tarragona btn btn-lg btn-warning border-none rounded">Equipos
-      asignados a personas de Tarragona</button>
-    <button class="boton provincias btn btn-lg btn-warning border-none rounded">Provincias
-      donde hay equipos</button>
-    <button class="boton puestos btn btn-lg btn-warning border-none rounded">Puestos
-      de
-      trabajadores con
-      equipo</button>
-    <button class="boton edad-media btn btn-lg btn-warning border-none rounded">Media
-      de
-      edad
-      de
-      trabajadores</button>
-    <button class="boton orden-edad btn btn-lg btn-warning border-none rounded">Equipos
-      ordenados por
-      edad</button>
-    <button class="boton sobremesa btn btn-lg btn-warning border-none rounded">Equipos
-      de
-      tipo
-      sobremesa</button>
-    <button
-      class="boton trabajadores-portatil btn btn-lg btn-warning border-none rounded">Trabajadores
-      con equipo
-      portatil</button>
-    <button class="boton equipos-tipo btn btn-lg btn-warning border-none rounded">Equipos
-      organizados por
-      equipo</button>
-    <button class="boton portatiles-tarragona btn btn-lg btn-warning border-none rounded">Equipos
-      portatiles
-      asignados
-      en
-      Tarragona</button>
-    <button class="boton resumen btn btn-lg btn-warning border-none rounded">Resumen
-      de
-      equipos
-      asignados</button>
-  </section>
-  <section
-    class="consola container-fluid d-flex flex-row justify-content-center align-items-center pr-0">
-    <div class="recuadro p-1">
-    </div>
-  </section>
+<body>
+  <div class="row container-fluid d-flex flex-row vh-100 p-0 m-0">
+    <section class="botonera col-8">
+      <ul class="align-content-center align-items-start list-unstyled row ">
+        <li class="col-lg-3 col-md-4">
+          <button class="boton gt30 btn-block btn btn-lg btn-warning border-none rounded">Equipos
+            asignados a mayores de 30</button>
+        </li>
+        <li class="col-lg-3 col-md-4">
+          <button class="boton tarragona btn btn-lg btn-warning border-none rounded">Equipos
+            asignados a personas de Tarragona</button>
+        </li>
+        <li class="col-lg-3 col-md-4">
+          <button class="boton provincias btn btn-lg btn-warning border-none rounded">Provincias
+            donde hay equipos</button>
+        </li>
+        <li class="col-lg-3 col-md-4">
+          <button class="boton puestos btn btn-lg btn-warning border-none rounded">Puestos
+            de
+            trabajadores con
+            equipo</button>
+        </li>
+        <li class="col-lg-3 col-md-4">
+          <button class="boton edad-media btn btn-lg btn-warning border-none rounded">Media
+            de
+            edad
+            de
+            trabajadores</button>
+        </li>
+        <li class="col-lg-3 col-md-4">
+          <button class="boton orden-edad btn btn-lg btn-warning border-none rounded">Equipos
+            ordenados por
+            edad</button>
+        </li>
+        <li class="col-lg-3 col-md-4">
+          <button class="boton sobremesa btn btn-lg btn-warning border-none rounded">Equipos
+            de
+            tipo
+            sobremesa</button>
+        </li>
+        <li class="col-lg-3 col-md-4">
+          <button class="boton trabajadores-portatil btn btn-lg btn-warning border-none rounded">Trabajadores
+            con equipo
+            portatil</button>
+        </li>
+        <li class="col-lg-3 col-md-4">
+          <button class="boton equipos-tipo btn btn-lg btn-warning border-none rounded">Equipos
+            organizados por
+            equipo</button>
+        </li>
+        <li class="col-lg-3 col-md-4">
+          <button class="boton portatiles-tarragona btn btn-lg btn-warning border-none rounded">Equipos
+            portatiles
+            asignados
+            en
+            Tarragona</button>
+        </li>
+        <li class="col-lg-3 col-md-4">
+          <button class="boton resumen btn btn-lg btn-warning border-none rounded">Resumen
+            de
+            equipos
+            asignados</button>
+        </li>
+      </ul>
+    </section>
+    <section
+      class="consola container-fluid d-flex flex-row justify-content-center align-items-center p-0 col-4 overflow-auto">
+      <div class="recuadro p-1">
+      </div>
+    </section>
+  </div>
 </body>
 
 </html>
