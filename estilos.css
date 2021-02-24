@@ -9,7 +9,11 @@ background-color: #90a081;
 }
 .recuadro {
   background-color: #1e1e1e;
-  color: green;
+  color: #18ad79;
+  font-size: 14px;
   height: 80%;
   width: 90%;
+}
+.boton {
+  margin: 20px 0px;
 }
