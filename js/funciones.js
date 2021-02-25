@@ -17,7 +17,29 @@ const edadMedia = equipos => equipos.reduce((accu, elemento) => accu + elemento.
 const equiposPorEdad = equipos => equipos.sort((a, b) => a.asignado.empleado.edad - b.asignado.empleado.edad);
 
 // Funcion 7
-const equiposTipo = ((equipos, tipo) => equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo.toLowerCase()));
-console.log(equiposTipo(equipos, "sobremesa"));
+const equiposTipo = ((equipos, tipo) =>
+  equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo.toLowerCase()));
 
-// Funcion 9
+// Funcion 8
+const trabajadoresTipo = ((equipos, tipo) => equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo.toLowerCase())
+  .map(equipo => {
+    const trabajador = {
+      empleado: equipo.asignado.empleado
+    }
+    return trabajador
+  }));
+
+// Funcion 10
+const equiposTipoLocalidad = ((equipos, tipo, localidad) =>
+  equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo.toLowerCase() && equipo.asignado.poblacion.toLowerCase() === localidad.toLowerCase()));
+
+//Funcion 11
+const resumenEquipos = equipos => equipos.map(equipo => {
+  const resumen = {
+    id : equipo.id,
+    poblacion: equipo.asignado.poblacion,
+    provincia: equipo.asignado.provincia
+  }
+  return resumen;
+})
+
