@@ -12,7 +12,9 @@ body {
 
   font-size: 14px;
   height: 550px;
-  width: 330px;
+  width: 350px;
+  max-width: 90%;
+
 }
 
 .boton {
