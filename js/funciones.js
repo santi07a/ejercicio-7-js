@@ -1,5 +1,5 @@
 // Funcion 1
-const equiposMayoresEdad = equipos => equipos.filter(equipo => equipo.asignado.empleado.edad >= 18);
+const equiposMayoresEdad = (equipos, edad) => equipos.filter(equipo => equipo.asignado.empleado.edad >= edad);
 
 // Funcion 2
 const equiposProvincia = (elementos, provincia) => elementos.filter(elemento => elemento.asignado.provincia.toLowerCase() === provincia.toLowerCase());
