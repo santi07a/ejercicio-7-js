@@ -1,5 +1,5 @@
 // Funcion 1
-const equiposMayoresDeEdad = equipos => equipos.filter(equipo => equipo.asignado.empleado.edad >= 18).length;
+const equiposMayoresEdad = equipos => equipos.filter(equipo => equipo.asignado.empleado.edad >= 18).length;
 
 // Funcion 2
 const equiposProvincia = equipos => equipos.filter(equipo => equipo.asignado.provincia === "Tarragona");
@@ -43,3 +43,19 @@ const resumenEquipos = equipos => equipos.map(equipo => {
   return resumen;
 })
 
+// Funcion 9
+const equiposPorTipo = elementos =>
+{
+    const tipos = elementos.map(element => element.tipo)
+      .filter((element, i, arr) => arr.indexOf(element) === i);
+
+    const resulatado = [];
+    tipos.forEach(tipo => {
+      const equipos = elementos.filter(equipo => equipo.tipo === tipo)
+        resulatado.push({
+          tipo,
+          equipos
+        })
+    });
+    return resulatado;
+  }
