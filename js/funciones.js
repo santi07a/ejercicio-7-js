@@ -12,7 +12,7 @@ function provincias(equipos) {
 const puestos = equipos => equipos.filter(encargo => encargo.asignado.empleado.puesto === "Frontend developer");
 
 // Funcion 5
-//const edadMedia = equipos.reduce((accu, elemento) => accu + elemento.equipos.asignado.empleado.edad, 0) / equipos.length;
+const edadMedia = equipos => equipos.reduce((accu, elemento) => accu + elemento.asignado.empleado.edad, 0) / equipos.length;
 
 // Funcion 6
 const equiposPorEdad = equipos => equipos.sort((a, b) => a.asignado.empleado.edad - b.asignado.empleado.edad)
