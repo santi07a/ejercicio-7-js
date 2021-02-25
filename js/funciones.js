@@ -2,7 +2,7 @@
 const equiposMayoresEdad = elementos => elementos.filter(elemento => elemento.asignado.empleado.edad >= 18);
 
 // Funcion 2
-const equiposProvincia = elementos => elementos.filter(elemento => elemento.asignado.provincia === "Tarragona");
+const equiposProvincia = (elementos, provincia) => elementos.filter(elemento => elemento.asignado.provincia.toLowerCase() === provincia.toLowerCase());
 
 // Funcion 3
 const provincias = elementos => elementos.map(elemento => elemento.asignado.provincia);
