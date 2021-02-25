@@ -5,11 +5,10 @@ const equiposMayoresDeEdad = equipos => equipos.filter(equipo => equipo.asignado
 const equiposProvincia = equipos => equipos.filter(equipo => equipo.asignado.provincia === "Tarragona");
 
 // Funcion 3
-function provincias(equipos) {
+const provincias = equipos => equipos.slice(equipo => equipo.asignado.provincia);
 
-}
 // Funcion 4
-const puestos = equipos => equipos.filter(encargo => encargo.asignado.empleado.puesto === "Frontend developer");
+const puestos = equipos => equipos.slice(encargo => encargo.asignado.empleado.puesto);
 
 // Funcion 5
 const edadMedia = equipos => equipos.reduce((accu, elemento) => accu + elemento.asignado.empleado.edad, 0) / equipos.length;
