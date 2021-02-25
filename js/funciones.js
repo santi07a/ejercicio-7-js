@@ -5,7 +5,7 @@ const equiposMayoresEdad = elementos => elementos.filter(elemento => elemento.as
 const equiposProvincia = (elementos, provincia) => elementos.filter(elemento => elemento.asignado.provincia.toLowerCase() === provincia.toLowerCase());
 
 // Funcion 3
-const provincias = elementos => elementos.map(elemento => elemento.asignado.provincia);
+const provincias = elementos => elementos.map(elemento => elemento.asignado.provincia).filter((provincia, i, provincias) => provincias.indexOf(provincia) === i)
 
 // Funcion 4
 const puestos = elementos => elementos.map(encargo => encargo.asignado.empleado.puesto);
