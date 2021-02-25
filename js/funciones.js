@@ -1,42 +1,42 @@
 // Funcion 1
-const equiposMayoresEdad = equipos => equipos.filter(equipo => equipo.asignado.empleado.edad >= 18);
+const equiposMayoresEdad = elementos => elementos.filter(elemento => elemento.asignado.empleado.edad >= 18);
 
 // Funcion 2
-const equiposProvincia = equipos => equipos.filter(equipo => equipo.asignado.provincia === "Tarragona");
+const equiposProvincia = elementos => elementos.filter(elemento => elemento.asignado.provincia === "Tarragona");
 
 // Funcion 3
-const provincias = equipos => equipos.map(equipo => equipo.asignado.provincia);
+const provincias = elementos => elementos.map(elemento => elemento.asignado.provincia);
 
 // Funcion 4
-const puestos = equipos => equipos.map(encargo => encargo.asignado.empleado.puesto);
+const puestos = elementos => elementos.map(encargo => encargo.asignado.empleado.puesto);
 
 // Funcion 5
-const edadMedia = equipos => equipos.reduce((accu, elemento) => accu + elemento.asignado.empleado.edad, 0) / equipos.length;
+const edadMedia = elementos => elementos.reduce((accu, elemento) => accu + elemento.asignado.empleado.edad, 0) / elementos.length;
 
 // Funcion 6
-const equiposPorEdad = equipos => equipos.sort((a, b) => a.asignado.empleado.edad - b.asignado.empleado.edad);
+const equiposPorEdad = elementos => elementos.sort((a, b) => a.asignado.empleado.edad - b.asignado.empleado.edad);
 
 // Funcion 7
-const equiposTipo = ((equipos, tipo) => equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo.toLowerCase()));
+const equiposTipo = ((elementos, tipo) => elementos.filter(elemento => elemento.tipo.toLowerCase() === tipo.toLowerCase()));
 
 // Funcion 8
-const trabajadoresTipo = ((equipos, tipo) => equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo.toLowerCase())
-  .map(equipo => {
+const trabajadoresTipo = ((elementos, tipo) => elementos.filter(elemento => elemento.tipo.toLowerCase() === tipo.toLowerCase())
+  .map(elemento => {
     const trabajador = {
-      empleado: equipo.asignado.empleado
+      empleado: elemento.asignado.empleado
     };
     return trabajador;
   }));
 
 // Funcion 10
-const equiposTipoLocalidad = ((equipos, tipo, localidad) => equipos.filter(equipo => equipo.tipo.toLowerCase() === tipo.toLowerCase() && equipo.asignado.poblacion.toLowerCase() === localidad.toLowerCase()));
+const equiposTipoLocalidad = ((elementos, tipo, localidad) => elementos.filter(elemento => elemento.tipo.toLowerCase() === tipo.toLowerCase() && elemento.asignado.poblacion.toLowerCase() === localidad.toLowerCase()));
 
 // Funcion 11
-const resumenEquipos = equipos => equipos.map(equipo => {
+const resumenEquipos = elementos => elementos.map(elemento => {
   const resumen = {
-    id: equipo.id,
-    poblacion: equipo.asignado.poblacion,
-    provincia: equipo.asignado.provincia
+    id: elemento.id,
+    poblacion: elemento.asignado.poblacion,
+    provincia: elemento.asignado.provincia
   };
   return resumen;
 });
