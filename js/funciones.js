@@ -32,27 +32,17 @@ const trabajadoresTipo = ((elementos, tipo) => elementos.filter(elemento => elem
 const equiposTipoLocalidad = ((elementos, tipo, localidad) => elementos.filter(elemento => elemento.tipo.toLowerCase() === tipo.toLowerCase() && elemento.asignado.poblacion.toLowerCase() === localidad.toLowerCase()));
 
 // Funcion 11
-const resumenEquipos = elementos => elementos.map(elemento => {
-  const resumen = {
+const resumenEquipos = elementos => elementos.map(elemento => ({
     id: elemento.id,
     poblacion: elemento.asignado.poblacion,
     provincia: elemento.asignado.provincia
-  };
-  return resumen;
-})
+}))
 
 // Funcion 9
-const equiposPorTipo = elementos => {
-  const tipos = elementos.map(element => element.tipo)
-    .filter((element, i, arr) => arr.indexOf(element) === i);
-
-  const resulatado = [];
-  tipos.forEach(tipo => {
-    const equipos = elementos.filter(equipo => equipo.tipo === tipo)
-    resulatado.push({
+const equiposPorTipo = elementos =>
+  elementos.map(element => element.tipo)
+    .filter((element, i, arr) => arr.indexOf(element) === i)
+    .map(tipo => ({
       tipo,
-      equipos
-    })
-  });
-  return resulatado;
-}
+      equipos : elementos.filter(equipo => equipo.tipo === tipo)
+  }))
